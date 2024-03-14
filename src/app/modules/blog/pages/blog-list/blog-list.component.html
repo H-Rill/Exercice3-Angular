@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Blog List</h2>
+</div>
+
+<div class="flex-container">
+    <div *ngFor="let data of blogs">
+        <app-blog-item [blog] = "data">
+        </app-blog-item>
+    </div>
+</div>

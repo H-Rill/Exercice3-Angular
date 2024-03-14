@@ -1,0 +1,23 @@
+<div class="flex-container">
+    <div class="message-card">
+        <div class="message-header">
+            <div class="pill-group">
+                <a (click)="book && editBook(book.id)">Edit</a>
+                
+            </div>
+            <h3 *ngIf="isEdited || isDeleted">{{isDeleted ? 'Delete' : 'Edit'}} Id #: {{isDeleted? deleteBookId:editingBookId}}</h3>
+            <h3>BOOK: {{book?.name}}</h3>
+            <p>ISBN: {{book?.isbn}}</p>
+        </div>
+        <div class="message-content">
+            <p>Author: {{book?.authors?.join('; ')}}</p>
+            
+        </div>
+        <div class="pill-group">
+            <button type="button" (click)="book && deleteBook(book.id)">Delete</button>
+        </div>
+    
+       
+    </div>
+    
+</div>

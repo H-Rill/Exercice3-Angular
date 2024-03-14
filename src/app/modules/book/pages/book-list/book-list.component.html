@@ -1,0 +1,12 @@
+
+
+<div class="container">
+    <h2>Book List</h2>
+   <div class="grid-container">
+    
+    <div *ngFor="let data of books">
+        <app-book-item  [book] = "data">
+        </app-book-item>
+    </div>
+   </div>
+</div>

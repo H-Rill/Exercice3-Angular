@@ -1,0 +1,20 @@
+<div class="blog-list">
+    <div class="pill-group">
+        <a class="edit" (click)="blog && editBlog(blog.id)">Edit</a>
+        <a class="delete" (click)="blog && deleteBlog(blog.id)">Delete</a>
+        
+    </div>
+    <div class="post">
+        <h3 *ngIf="isEdited || isDeleted">{{isDeleted ? 'Delete' : 'Edit'}} Id #: {{isDeleted? deleteBlogId:editingBlogId}}</h3>
+      <h2 class="title">{{ blog?.title }}</h2>
+      <p class="description">{{ blog?.description }}.</p>
+      <p class="author">Author : {{ blog?.author }}</p>
+      <div class="comments">
+        <div *ngFor="let comment of blog?.comments; let i = index" class="comment">
+          Comment {{ i + 1 }} on this post: {{ comment }}
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
