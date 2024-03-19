@@ -5,19 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { CommandBarComponent } from './shared/components/command-bar/command-bar.component';
-import { FormsModule } from '@angular/forms';
+import { BlogModule } from './modules/blog/blog.module';
+import { BookModule } from './modules/book/book.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CommandBarComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BlogModule,
+    BookModule,
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [
     provideClientHydration(),

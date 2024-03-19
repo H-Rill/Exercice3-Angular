@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BookService } from '../../services/book.service';
 import { Book } from '../../models/book';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book-list',
@@ -17,10 +18,24 @@ export class BookListComponent {
   //injecting the constructor
   constructor(
     //property injection
-    private service: BookService
+    private service: BookService, private router: Router
     ){
     this.books = this.service.getAllBooks();
 
+  }
+
+  handleAction(actionType: string){
+    switch(actionType){
+      case 'add':
+        this.router.navigate(['book/form']);
+       
+        break;
+      case 'delete':
+        console.log("what delete")
+        this.books=[];
+        this.service.deleteAllBooks();
+        
+    }
   }
 
 

@@ -1,7 +1,9 @@
 
 
+
 <div class="container">
     <h2>Book List</h2>
+    <app-command-bar (addAction)="handleAction($event)" (deleteAllAction)="handleAction($event)"></app-command-bar>
    <div class="grid-container">
     
     <div *ngFor="let data of books">

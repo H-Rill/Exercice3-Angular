@@ -88,4 +88,8 @@ export class BookService {
     return foundBook;
   }
 
+  deleteAllBooks(): Book[]{
+    return [];
+  }
+
 }

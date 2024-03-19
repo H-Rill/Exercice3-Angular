@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
+
+body {
+	margin:0;
+	font-family:arial,tahoma,sans-serif;
+    font-size: 14px;
+	font-weight:normal;
+	direction:ltr;
+}
+
+form {
+	margin:10% auto 0 auto;
+	padding:30px;
+	width:400px;
+	height:auto;
+	overflow:hidden;
+	background:white;
+	border-radius:10px;
+}
+
+form label {
+	font-size:15px;
+	color:darkgray;
+	cursor:pointer;
+}
+
+form label,
+form input,
+form textarea {
+	float:left;
+	clear:both;
+}
+
+form input {
+	margin:15px 0;
+	padding:15px 10px;
+	width:100%;
+	outline:none;
+	border:1px solid #bbb;
+	border-radius:20px;
+	display:inline-block;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+    -webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+form input:focus,
+textarea:focus{
+	border-color:cornflowerblue;
+}
+
+button {
+    margin-top: 20px;
+	padding:15px 50px;
+    border-radius: 20px;
+    font-size: 16px;
+	background:#1abc9c;
+	border:none;
+	color:white;
+	cursor:pointer;
+	// display:inline-block;
+	float:right;
+	clear:right;
+	-webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+
+
+input:hover,
+textarea:hover {
+	opacity:0.8;
+}
+
+input:active
+textarea:active {
+	opacity:0.4;
+}
+
+
+
+
+#logo {
+	margin:0 auto;
+    padding-bottom: 40px;
+	font-family:'Lily Script One', cursive;
+	font-size:60px;
+	font-weight:bold;
+	text-align:center;
+	color:lightgray;
+	-webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+#logo:hover {
+	color:cornflowerblue;
+}
+
+#lined {
+    display: block;
+    margin: auto;
+    font-size: 14px;
+    padding: 10px 0;
+    line-height: 40px;
+    background-image: linear-gradient(#eee 1px,transparent 1px);
+    background-size: 100% 40px;
+    width:100%;
+	outline:none;
+	border:1px solid #bbb;
+	border-radius:20px;
+	display:inline-block;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+    -webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+  }

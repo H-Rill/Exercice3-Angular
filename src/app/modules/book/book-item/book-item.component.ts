@@ -36,5 +36,8 @@ export class BookItemComponent {
     this.deleteBookId = deleteBook.id; 
   }
 
+
+  
+
  
 }

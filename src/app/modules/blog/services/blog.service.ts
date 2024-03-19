@@ -50,6 +50,11 @@ export class BlogService {
     this.blogs.push(blog)
   }
 
+  deleteAll(){
+
+  this.blogs = [];
+
+  }
 
   getAllBlog(): Blog[]{
     return this.blogs;

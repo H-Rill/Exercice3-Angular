@@ -2,6 +2,10 @@
     <h2>Blog List</h2>
 </div>
 
+<!-- blog-list.component.html or book-list.component.html -->
+<app-command-bar (addAction)="handleAction($event)" (deleteAllAction)="handleAction($event)"></app-command-bar>
+
+
 <div class="flex-container">
     <div *ngFor="let data of blogs">
         <app-blog-item [blog] = "data">

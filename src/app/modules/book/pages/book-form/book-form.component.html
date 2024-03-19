@@ -1,0 +1,26 @@
+<div class="form-container">
+    <h2>Add New Books</h2>
+    <form [formGroup]="reactiveForm" (click)="OnFormSubmitted()">
+      <label for="book">Book</label>
+      <input type="text" id="book" name="book" formControlName="book" placeholder="Enter book here..">
+  
+      <label for="isbn">ISBN</label>
+      <input type="text" id="isbn" name="isbn" formControlName="isbn" placeholder="Enter isbn here..">
+  
+      <div class="input-box skills" formArrayName="authors">
+        <h4>Add Authors</h4>
+        <div class="column" *ngFor="let control of authorControls; let i = index">
+          <input type="text" placeholder="Add Author..." [formControlName]="i">
+          <button type="button" class="btn-delete" (click)="DeleteAuthor(i)">
+            Delete
+          </button>
+        </div>
+      </div>
+      <div class="btn-add-container">
+        <button type="button" class="btn-add" (click)="AddAuthors()">Add Author</button>
+      </div>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
